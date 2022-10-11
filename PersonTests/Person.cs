@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents one person saving their name.
     /// </summary>
-    public class Person : IDisplay
+    public class Person : IDisplay, IComparable<Person>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Person"/> class.
