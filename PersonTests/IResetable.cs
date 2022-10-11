@@ -8,6 +8,6 @@ namespace PersonTests
 {
     internal interface IResetable
     {
-        void Reset(); 
+        void Reset();
     }
 }
