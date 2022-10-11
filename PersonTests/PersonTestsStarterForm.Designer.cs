@@ -20,6 +20,20 @@
             base.Dispose(disposing);
         }
 
+        private static int TestDisplay()
+        {
+            int returnValue = 0;
+            try
+            {
+                new Person("Bob").Display();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("TestDisplay failed!");
+                returnValue = 1;
+            }
+            return returnValue;
+        }
         #region Windows Form Designer generated code
 
         /// <summary>
