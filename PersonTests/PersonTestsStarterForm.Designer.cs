@@ -20,6 +20,39 @@
             base.Dispose(disposing);
         }
 
+        private static int TestDisplay()
+        {
+            int returnValue = 0;
+            try
+            {
+                new Person("Bob").Display();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Display failed!");
+                returnValue = 1;
+            }
+            return returnValue;
+        }
+
+        private static int TestCompare()
+        {
+            Person person1 = new ("Joe");
+            Person person2 = new ("Bob");
+
+            int returnValue = 0;
+            if (person1.CompareTo(person2) < 0)
+            {
+                return returnValue;
+            }
+            else
+            {
+                MessageBox.Show("Compare failed!");
+                returnValue = 1;
+                return returnValue;
+            }
+        }
+
         #region Windows Form Designer generated code
 
         /// <summary>
