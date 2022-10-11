@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents one person saving their name.
     /// </summary>
-    public class Person
+    public class Person : IDisplay, IComparable<Person>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Person"/> class.
@@ -27,6 +27,24 @@
         public override string ToString()
         {
             return this.Name;
+        }
+
+        /// <summary>
+        /// Displays name.
+        /// </summary>
+        public void Display()
+        {
+            MessageBox.Show(this.Name);
+        }
+
+        /// <summary>
+        /// Compares the names of the person.
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns>the int value of compareTo method</returns>
+        public int compareTo(Person other)
+        {
+            return this.Name.CompareTo(other.Name);
         }
     }
 }
