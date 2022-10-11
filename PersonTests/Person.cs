@@ -36,5 +36,16 @@
         {
             MessageBox.Show(this.Name);
         }
+
+
+        /// <summary>
+        /// Compares current name to another persons name.
+        /// </summary>
+        /// <param name="other">Represents another Person</param>
+        /// <returns>The int compare value</returns>
+        public int CompareTo(Person other)
+        {
+            return this.Name.CompareTo(other.Name);
+        }
     }
 }
